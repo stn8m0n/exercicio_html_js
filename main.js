@@ -19,13 +19,13 @@ function validaForm(){
     if (validaForm){
         var containerSucesso = document.querySelector(".sucess-message");
         containerSucesso.innerHTML = mensagemSucesso;
-        containerSucesso.computedStyleMap.display = "block";
+        containerSucesso.style.display = "block";
 
         campoA.value = "";
         campoB.value = "";
 
     } else  {
-        var containerErro = document.getElementById(".error-message");
+        var containerErro = document.querySelector(".error-message");
         containerErro.innerHTML =mensagemErro;
         containerErro.style.display = "block";
 
