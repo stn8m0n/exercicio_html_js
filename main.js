@@ -1,22 +1,35 @@
 
 const form = document.getElementById('form-valida');
-const campoA = document.getElementById('campo-a');
-const campoB = document.getElementById('campo-b');
-const mensagemSucesso= document.querySelector('.sucess-message');
-const mensagemErro= document.querySelector('.error-message');
+let formEvalido = false;
 
+form.addEventListener('submit', function(e){
+    e.preventDefault();
 
-form.addEventListener('submit', function(){
-    Event.preventDefault();
-    
-    const valorcampoA = parseFloat(campoA.value);
-    const valorcampoB = parseFloat(campoB.value);
+    validaForm();
+});
 
+function validaForm(){
 
-    if (valorcampoA > valorcampoB){
+    var campoA = document.getElementById('campo-a');
+    var campoB = document.getElementById('campo-b');
+    var mensagemSucesso= ` O valor do campo B <b>${campoA.value}</b> é maior que o valor do campo A <b>${campoA.value}</b>`;
+    var mensagemErro= ` O valor do campo B <b>${campoA.value}</b> é menor que o valor do campo A <b>${campoA.value}</b>`;
+    var formEvalido = valorcampoB > valorcampoA;
 
-        mensagem.textContent = mensagemSucesso 
-    } else {
-        mensagem.textContent = mensagemErro
+    if (validaForm){
+        var containerSucesso = document.querySelector(".sucess-message");
+        containerSucesso.innerHTML = mensagemSucesso;
+        containerSucesso.computedStyleMap.display = "block";
+
+        campoA.value = "";
+        campoB.value = "";
+
+    } else  {
+        var containerErro = document.getElementById(".error-message");
+        containerErro.innerHTML =mensagemErro;
+        containerErro.style.display = "block";
+
+        campoA.value = "";
+        campoB.value = "";
     }
-})
+}

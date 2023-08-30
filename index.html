@@ -12,11 +12,11 @@
         <h1>Validator ®</h1>
         <h2> O seu validador de campos numéricos.</h2>
         <form id="form-valida">
-            <input type="number" id="campo-a" required placeholder="Insira o calor no Campo A" />
-            <p class="error-message">
-                O valor precisa maior que valor do campo B
-            </p>
-            <input type="number" id="campo-b" required placeholder="Insira o calor no Campo B" />
+            <label for="text"> Campo A</label>
+            <input type="number" id="campo-a" required placeholder="Insira o valor do Campo A" />
+            <p class="error-message"></p>
+            <label for="text"> Campo B</label>
+            <input type="number" id="campo-b" required placeholder="Insira o valor do Campo B" />
             <button id="btm-validar" type="submit">Validar</button>
         </form>
         <P class="sucess-message"></P>
