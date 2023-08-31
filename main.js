@@ -26,7 +26,7 @@ function validaForm(){
 
     } else  {
         let containerErro = document.querySelector(".error-message");
-        containerErro.innerHTML =mensagemErro;
+        containerErro.innerHTML = mensagemErro;
         containerErro.style.display = "block";
 
         campoA.value = "";
