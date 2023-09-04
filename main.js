@@ -15,8 +15,10 @@ function validaForm(){
     let mensagemSucesso= ` O valor do campo B <b>${campoA.value}</b> é maior que o valor do campo A <b>${campoA.value}</b>`;
     let mensagemErro= ` O valor do campo B <b>${campoA.value}</b> é menor que o valor do campo A <b>${campoA.value}</b>`;
     let formEvalido = valorcampoB > valorcampoA;
+    let valorcampoA = parseInt(campoA.value);
+    let valorcampoB = parseInt(campoB.value);
 
-    if (validaForm){
+    if (formEvalido){
         let containerSucesso = document.querySelector(".sucess-message");
         containerSucesso.innerHTML = mensagemSucesso;
         containerSucesso.style.display = "block";
