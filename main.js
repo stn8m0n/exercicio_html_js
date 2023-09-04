@@ -14,8 +14,8 @@ function validaForm(){
     let campoB = document.getElementById('campo-b');
     let valorcampoA = parseInt(campoA.value);
     let valorcampoB = parseInt(campoB.value);
-    let mensagemSucesso= ` O valor do campo B <b>${campoA.value}</b> é maior que o valor do campo A <b>${campoA.value}</b>`;
-    let mensagemErro= ` O valor do campo B <b>${campoA.value}</b> é menor que o valor do campo A <b>${campoA.value}</b>`;
+    let mensagemSucesso= ` O valor do campo B <b>${campoB.value}</b> é maior que o valor do campo A <b>${campoA.value}</b>`;
+    let mensagemErro= ` O valor do campo B <b>${campoB.value}</b> é menor que o valor do campo A <b>${campoA.value}</b>`;
     let formEvalido = valorcampoB > valorcampoA;
 
     if (formEvalido){
