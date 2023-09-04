@@ -1,6 +1,6 @@
 
-const form = document.getElementById('form-valida');
-let formEvalido = false;
+let form = document.getElementById('form-valida');
+const formEvalido = false;
 
 form.addEventListener("submit", function(e){
     e.preventDefault();
@@ -8,7 +8,7 @@ form.addEventListener("submit", function(e){
     validaForm();
 });
 
-function validaForm(){
+function validaForm(e){
 
     let campoA = document.getElementById('campo-a');
     let campoB = document.getElementById('campo-b');
