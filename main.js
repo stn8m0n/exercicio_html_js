@@ -2,7 +2,7 @@
 const form = document.getElementById('form-valida');
 let formEvalido = false;
 
-form.addEventListener("submit", function(e){
+form.addEventListener('submit', function(e){
     e.preventDefault();
 
     validaForm();
