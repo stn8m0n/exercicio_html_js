@@ -19,17 +19,19 @@ function validaForm(e){
     let formEvalido = valorcampoB > valorcampoA;
 
     if (formEvalido){
-        let containerSucesso = document.querySelector(".sucess-message").style.display = 'none';
+        let containerSucesso = document.querySelector(".sucess-message");
         containerSucesso.innerHTML = mensagemSucesso;
         containerSucesso.style.display = "block";
+        /*document.querySelector(".sucess-message").style.display='none';*/
 
         campoA.value = "";
         campoB.value = "";
 
     } else  {
-        let containerErro = document.querySelector(".error-message").style.display = 'none';
+        let containerErro = document.querySelector(".error-message");
         containerErro.innerHTML = mensagemErro;
         containerErro.style.display = "block";
+        /*document.querySelector(".error-message").style.display='none';*/
 
         campoA.value = "";
         campoB.value = "";
