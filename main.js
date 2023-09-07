@@ -19,7 +19,7 @@ function validaForm(e){
     let formEvalido = valorcampoB > valorcampoA;
 
     if (formEvalido){
-        let containerSucesso = document.querySelector(".sucess-message");
+        let containerSucesso = document.querySelector(".sucess-message").style.display = 'none';
         containerSucesso.innerHTML = mensagemSucesso;
         containerSucesso.style.display = "block";
 
@@ -27,7 +27,7 @@ function validaForm(e){
         campoB.value = "";
 
     } else  {
-        let containerErro = document.querySelector(".error-message");
+        let containerErro = document.querySelector(".error-message").style.display = 'none';
         containerErro.innerHTML = mensagemErro;
         containerErro.style.display = "block";
 
